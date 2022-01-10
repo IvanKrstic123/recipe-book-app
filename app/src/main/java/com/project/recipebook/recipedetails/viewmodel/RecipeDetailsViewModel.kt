@@ -19,6 +19,7 @@ class RecipeDetailsViewModel(private val dataSource: IRecipesDataSource) : ViewM
         viewModelScope.launch(Dispatchers.IO) {
 
             _state.postValue(RecipeDetailsViewState.Processing)
+            println(dataSource.getRecipeById(value))
 
             _state.postValue(
                 when (val result = dataSource.getRecipeById(value)) {

@@ -10,7 +10,7 @@ class RecipeRVViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(recipe: Recipe, onItemClicked: (Int) -> Unit) {
         itemView.recipeName.text = recipe.title
-        itemView.recipeDescription.text = "some description"
+        itemView.recipeDescription.text = recipe.toString()
         Glide.with(itemView).load(recipe.image).into(itemView.recipeImg)
 
         itemView.setOnClickListener { onItemClicked.invoke(recipe.id) }

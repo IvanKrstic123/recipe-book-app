@@ -1,4 +1,4 @@
-package com.project.recipebook.base.home
+package com.project.recipebook.homepage
 
 import android.content.Context
 import android.os.Bundle
@@ -9,8 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.project.recipebook.R
 import com.project.recipebook.base.ICoordinator
-import com.project.recipebook.recipecategorylist.RecipeCategoryListFragment
-import kotlinx.android.synthetic.main.fragment_recipe_category_list.*
 import kotlinx.android.synthetic.main.fragment_splash.*
 
 class SplashFragment : Fragment(){

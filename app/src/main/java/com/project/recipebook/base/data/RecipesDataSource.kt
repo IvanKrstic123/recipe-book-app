@@ -2,6 +2,7 @@ package com.project.recipebook.base.data
 
 import com.project.recipebook.base.functional.Either
 import com.project.recipebook.base.model.Recipe
+import com.project.recipebook.base.model.RecipeDetails
 import com.project.recipebook.base.model.Recipes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -20,11 +21,14 @@ interface IRecipesDataSource {
 class RecipesDataSource(private val apiService: RecipesApiService): IRecipesDataSource {
 
     companion object {
+/*        private const val API_KEY =
+            "6801d9340c4b4bd6a20ebb42b5a3f10f"*/
+
         private const val API_KEY =
-            "6801d9340c4b4bd6a20ebb42b5a3f10f"
+            "4019c237997d4d9289a8cbfe6689c2ee"
     }
 
-    override suspend fun getRecipeById(id: Int): Either<Recipe> = handleCall(apiService.getRecipeById(id, API_KEY))
+    override suspend fun getRecipeById(id: Int): Either<Recipe> = handleCall(apiService.getRecipeById(API_KEY, id))
 
     override suspend fun getRecipeHighProtein(value: Int): Either<Recipes> = handleCall(apiService.getRecipeHighProtein(API_KEY, value))
 

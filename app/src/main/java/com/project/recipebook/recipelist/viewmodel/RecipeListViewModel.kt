@@ -23,12 +23,32 @@ class RecipeListViewModel(private val dataSource: IRecipesDataSource) : ViewMode
 
             _state.postValue(RecipeListViewState.Processing)
 
-            _state.postValue(
-                when (val result = dataSource.getRecipeHighProtein(value)) {
-                    is Either.Success -> DataReceived(result.data.list)
-                    is Either.Error -> ErrorReceived(result.exception.toString())
-                }
-            )
+            when(catName) {
+                "HighProtein" -> _state.postValue(
+                    when (val result = dataSource.getRecipeHighProtein(value)) {
+                        is Either.Success -> DataReceived(result.data.list)
+                        is Either.Error -> ErrorReceived(result.exception.toString())
+                    }
+                )
+                "LowFat" -> _state.postValue(
+                    when (val result = dataSource.getRecipeLowFat(value)) {
+                        is Either.Success -> DataReceived(result.data.list)
+                        is Either.Error -> ErrorReceived(result.exception.toString())
+                    }
+                )
+                "LowCalorie" -> _state.postValue(
+                    when (val result = dataSource.getRecipeLowCarbs(value)) {
+                        is Either.Success -> DataReceived(result.data.list)
+                        is Either.Error -> ErrorReceived(result.exception.toString())
+                    }
+                )
+                "HighCalorie" -> _state.postValue(
+                    when (val result = dataSource.getRecipeHighCarbs(value)) {
+                        is Either.Success -> DataReceived(result.data.list)
+                        is Either.Error -> ErrorReceived(result.exception.toString())
+                    }
+                )
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.project.recipebook.R
-import com.project.recipebook.base.home.SplashFragment
+import com.project.recipebook.homepage.SplashFragment
 import com.project.recipebook.recipecategorylist.RecipeCategoryListFragment
 import com.project.recipebook.recipedetails.RecipeDetailsFragment
 import com.project.recipebook.recipelist.view.RecipeListFragment

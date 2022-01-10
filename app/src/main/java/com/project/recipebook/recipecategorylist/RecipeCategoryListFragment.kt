@@ -23,7 +23,6 @@ class RecipeCategoryListFragment : Fragment() {
         "HighCalorie" to R.drawable.high_calories
     )
 
-    //
     private val categoryList:ArrayList<Category>  = arrayListOf(
         Category("HighProtein", 80, categoryMap.getValue("HighProtein").toInt()),
         Category("LowFat", 10 ,categoryMap.getValue("LowFat").toInt()),
