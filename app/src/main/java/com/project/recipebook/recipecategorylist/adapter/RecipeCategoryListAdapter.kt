@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
+import android.widget.TextView
 import com.project.recipebook.R
 import com.project.recipebook.base.model.Category
 
@@ -29,11 +30,12 @@ class RecipeCategoryListAdapter (
             viewItem = LayoutInflater.from(context).
             inflate(R.layout.item_rv_main_category, viewGroup, false);
         }
+        // binding view fields
+        val categoryImage = viewItem?.findViewById<ImageView>(R.id.img_dish)
+        val categoryTitle = viewItem?.findViewById<TextView>(R.id.tv_dish_name)
 
-        val gridView = viewItem?.findViewById<ImageView>(R.id.categoryGridView)
-
-
-        gridView?.setImageResource(categories[index].image)
+        categoryImage?.setImageResource(categories[index].image)
+        categoryTitle?.text = categories[index].name
 
         return viewItem!!
     }

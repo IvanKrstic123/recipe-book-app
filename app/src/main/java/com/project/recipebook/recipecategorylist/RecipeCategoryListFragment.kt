@@ -15,13 +15,15 @@ import kotlinx.android.synthetic.main.fragment_recipe_category_list.*
 
 class RecipeCategoryListFragment : Fragment() {
 
+    // images for custom adapter
     private val categoryMap = hashMapOf<String, Int>(
-        "HighProtein" to R.drawable.cat_img,
-        "LowFat" to R.drawable.cat_img,
-        "LowCalorie" to R.drawable.cat_img,
-        "HighCalorie" to R.drawable.cat_img
+        "HighProtein" to R.drawable.low_fat,
+        "LowFat" to R.drawable.low_calories,
+        "LowCalorie" to R.drawable.high_protein,
+        "HighCalorie" to R.drawable.high_calories
     )
 
+    //
     private val categoryList:ArrayList<Category>  = arrayListOf(
         Category("HighProtein", 80, categoryMap.getValue("HighProtein").toInt()),
         Category("LowFat", 10 ,categoryMap.getValue("LowFat").toInt()),
@@ -52,7 +54,7 @@ class RecipeCategoryListFragment : Fragment() {
         categoryGridView.adapter = categoryAdapter
 
         categoryGridView.setOnItemClickListener { adapterView, view, i, l ->
-            Log.d("Nesto: ", categoryList[i].value.toString())
+            Log.d("Nesto: ", categoryList[i].name.toString())
             (activity as ICoordinator).showRecipeList(categoryList[i].name,categoryList[i].value)
         }
     }

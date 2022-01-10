@@ -17,15 +17,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/img_dish"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-25dp"
-            android:layout_marginRight="-40dp"
-            android:src="@drawable/cat_img" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:id="@+id/img_dish"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-25dp"
+                android:layout_marginRight="-40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/high_calories" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tv_dish_name"
@@ -39,7 +49,7 @@
             android:text="Dish Name"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="11sp" />
+            android:textSize="16sp" />
     </RelativeLayout>
 
 

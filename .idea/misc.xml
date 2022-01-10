@@ -18,7 +18,8 @@
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_splash.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_recipe.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_recipe_details.xml" value="0.171875" />
-        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_rv_main_category.xml" value="0.4" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_rv_main_category.xml" value="0.536" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_rv_sub_category.xml" value="0.1703125" />
       </map>
     </option>
   </component>
