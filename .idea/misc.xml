@@ -4,13 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/drawable-v24/search.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/drawable/btn_bg.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/font/font.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/font/fonts.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/font/lobster_italic.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/font/lobster_regular.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/activity_splash.xml" value="0.136" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/card.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_recipe_category_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_recipe_details.xml" value="0.171875" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_recipe_details.xml" value="0.4213938411669368" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_recipe_list.xml" value="0.1421875" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/fragment_splash.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_recipe.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_recipe_details.xml" value="0.171875" />
-        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_rv_main_category.xml" value="0.136" />
+        <entry key="..\:/Users/krsti/AndroidStudioProjects/RecipeBook2/app/src/main/res/layout/item_rv_main_category.xml" value="0.4" />
       </map>
     </option>
   </component>

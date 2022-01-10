@@ -8,9 +8,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Categories"
+        android:text="Choose Meal Category"
         android:textSize="28sp"
-        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:paddingTop="30dp"
@@ -21,9 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="2"
-        android:horizontalSpacing="20dp"
         android:verticalSpacing="20dp"
-        android:layout_margin="20dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_margin="30dp"
         />
 
 </LinearLayout>

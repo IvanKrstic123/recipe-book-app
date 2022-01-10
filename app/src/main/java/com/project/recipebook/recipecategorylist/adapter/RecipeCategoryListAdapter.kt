@@ -28,13 +28,12 @@ class RecipeCategoryListAdapter (
         if(viewItem == null) {
             viewItem = LayoutInflater.from(context).
             inflate(R.layout.item_rv_main_category, viewGroup, false);
-            /*viewItem = this.layoutInflater.inflate(R.layout.item_rv_main_category, viewGroup, false)*/
         }
 
-        val categoryImage = viewItem?.findViewById<ImageView>(R.id.img_dish)
+        val gridView = viewItem?.findViewById<ImageView>(R.id.categoryGridView)
 
 
-        categoryImage?.setImageResource(categories[index].image)
+        gridView?.setImageResource(categories[index].image)
 
         return viewItem!!
     }

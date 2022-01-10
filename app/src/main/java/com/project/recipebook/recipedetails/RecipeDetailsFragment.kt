@@ -78,7 +78,6 @@ class RecipeDetailsFragment : Fragment() {
 
         val view = RecipeDetailsView(requireContext())
         view.bind(recipe)
-        recipeDetails.addView(view)
+        view.addView(view)
     }
-
 }

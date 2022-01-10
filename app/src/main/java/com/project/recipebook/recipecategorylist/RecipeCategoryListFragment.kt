@@ -56,5 +56,4 @@ class RecipeCategoryListFragment : Fragment() {
             (activity as ICoordinator).showRecipeList(categoryList[i].name,categoryList[i].value)
         }
     }
-
 }
