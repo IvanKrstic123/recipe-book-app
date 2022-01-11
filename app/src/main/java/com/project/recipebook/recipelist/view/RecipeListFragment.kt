@@ -77,14 +77,14 @@ class RecipeListFragment : Fragment() {
         }
     }
 
+    private fun setupRecyclerView(recipes: List<Recipe>) {
+        recipeListRV.adapter = RecipesRVAdapter(recipes) { recipeId -> // pass function to adapter
+            (activity as ICoordinator).shopRecipeDetails(recipeId)
+        }
+    }
+
     private fun showError(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun setupRecyclerView(recipes: List<Recipe>) {
-        recipeListRV.adapter = RecipesRVAdapter(recipes) { recipeId -> // pass function to adapter
-            (activity as ICoordinator).shopRecipeDetails(recipeId)
-            Log.d("RecipeListFragment", "$recipeId")
-        }
-    }
 }

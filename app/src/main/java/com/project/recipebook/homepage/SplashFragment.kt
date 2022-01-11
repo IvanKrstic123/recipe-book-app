@@ -27,10 +27,7 @@ class SplashFragment : Fragment(){
         contextActivity = container?.context!!
         return inflater.inflate(R.layout.fragment_splash, container, false)
 
-        val view: View = inflater!!.inflate(R.layout.fragment_splash, container, false)
 
-        btnGettingStarted.setOnClickListener { view ->
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

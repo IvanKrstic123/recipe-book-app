@@ -45,7 +45,7 @@ class RecipeListViewModelTests: InstantExecutorTest() {
 
         `when` (dataSource.getRecipeHighProtein(anyInt())).thenReturn(Either.Success(expectedResult))
 
-        viewModel.getRecipes("HighProtein", 150)
+        viewModel.getRecipes("HighProtein", 450)
 
         verify(stateObserver).onChanged(Processing)
         verify(stateObserver).onChanged(DataReceived(expectedResult.list))

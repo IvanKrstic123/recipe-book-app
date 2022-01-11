@@ -67,9 +67,8 @@ class RecipeDetailsFragment : Fragment() {
     private fun bindFromViewModel() {
         viewModel.state.observe(viewLifecycleOwner) { state ->
 
-//            // show progress bar for processing state
-//            recipeListProgressBar.isVisible = state is RecipeDetailsViewState.Processing
-
+//          show progress bar for processing state
+            recipeDetailsProgressBar.isVisible = state is RecipeDetailsViewState.Processing
             when (state) {
                 is RecipeDetailsViewState.DataReceived -> { setupItemView(state.recipeDetails) }
                 is RecipeDetailsViewState.ErrorReceived -> state.message
