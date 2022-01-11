@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.project.recipebook.R
 import com.project.recipebook.base.data.ApiServiceProvider
 import com.project.recipebook.base.data.RecipesDataSource
 import com.project.recipebook.base.functional.ViewModelFactoryUtil
 import com.project.recipebook.base.model.Recipe
+import com.project.recipebook.base.model.RecipeDetails
+import com.project.recipebook.recipedetails.view.RecipeDetailsInstructionsView
 import com.project.recipebook.recipedetails.view.RecipeDetailsView
 import com.project.recipebook.recipedetails.viewmodel.RecipeDetailsViewModel
 import com.project.recipebook.recipedetails.viewmodel.RecipeDetailsViewState
@@ -68,16 +71,30 @@ class RecipeDetailsFragment : Fragment() {
 //            recipeListProgressBar.isVisible = state is RecipeDetailsViewState.Processing
 
             when (state) {
-                is RecipeDetailsViewState.DataReceived -> { setupItemView(state.recipes) }
+                is RecipeDetailsViewState.DataReceived -> { setupItemView(state.recipeDetails) }
                 is RecipeDetailsViewState.ErrorReceived -> state.message
             }
         }
     }
 
-    private fun setupItemView(recipe: Recipe) {
+    private fun setupItemView(recipe: RecipeDetails) {
 
-        val view = RecipeDetailsView(requireContext())
-        view.bind(recipe)
-        view.addView(view)
+        detailsDishName.text = "${recipe.title} - ${recipe.readyInMinutes} min"
+//        detailsCardImage
+        Glide.with(detailsCardImage).load(recipe.image).into(detailsCardImage)
+
+        // ingredients binding
+        recipe.extendedIngredients.forEach { ingredient ->
+            val view = RecipeDetailsView(requireContext())
+            view.bind(ingredient)
+            detailsIngredientsLayout.addView(view)
+        }
+
+        //instructions binding
+        recipe.extendedIngredients.forEach { ingredient ->
+            val view = RecipeDetailsInstructionsView(requireContext())
+            view.bind(ingredient)
+            detailsInstructionsSection.addView(view)
+        }
     }
 }

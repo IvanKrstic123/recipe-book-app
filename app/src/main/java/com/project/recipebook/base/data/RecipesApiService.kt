@@ -10,8 +10,8 @@ import retrofit2.http.Query
 
 interface RecipesApiService {
 
-    @GET("recipes/{id}/information{apiKey}")
-    fun getRecipeById(@Path("apiKey") apiKey: String, @Path("id") id: Int): Call<Recipe>
+    @GET("recipes/{id}/information")
+    fun getRecipeById(@Path("id") id: Int, @Query("apiKey") apiKey: String): Call<RecipeDetails>
 
     @GET("recipes/complexSearch")
     fun getRecipeHighProtein(@Query("apiKey") apiKey: String, @Query("minProtein") value: Int): Call<Recipes>

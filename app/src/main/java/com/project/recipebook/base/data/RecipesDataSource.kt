@@ -10,12 +10,11 @@ import retrofit2.Call
 import java.lang.Exception
 
 interface IRecipesDataSource {
-    suspend fun getRecipeById(id: Int): Either<Recipe>
+    suspend fun getRecipeById(id: Int): Either<RecipeDetails>
     suspend fun getRecipeHighProtein(value: Int): Either<Recipes>
     suspend fun getRecipeLowFat(value: Int): Either<Recipes>
     suspend fun getRecipeLowCarbs(value: Int): Either<Recipes>
     suspend fun getRecipeHighCarbs(value: Int): Either<Recipes>
-
 }
 
 class RecipesDataSource(private val apiService: RecipesApiService): IRecipesDataSource {
@@ -24,11 +23,14 @@ class RecipesDataSource(private val apiService: RecipesApiService): IRecipesData
 /*        private const val API_KEY =
             "6801d9340c4b4bd6a20ebb42b5a3f10f"*/
 
+/*        private const val API_KEY =
+            "4019c237997d4d9289a8cbfe6689c2ee"*/
+
         private const val API_KEY =
-            "4019c237997d4d9289a8cbfe6689c2ee"
+            "df003d30d09c47bdb6d3aac4213958d8"
     }
 
-    override suspend fun getRecipeById(id: Int): Either<Recipe> = handleCall(apiService.getRecipeById(API_KEY, id))
+    override suspend fun getRecipeById(id: Int): Either<RecipeDetails> = handleCall(apiService.getRecipeById(id, API_KEY))
 
     override suspend fun getRecipeHighProtein(value: Int): Either<Recipes> = handleCall(apiService.getRecipeHighProtein(API_KEY, value))
 
@@ -42,6 +44,8 @@ class RecipesDataSource(private val apiService: RecipesApiService): IRecipesData
 
         return withContext(Dispatchers.IO) {
             val response = call.execute()
+
+            println(response)
 
             if (response.isSuccessful) {
                 Either.Success(response.body()!!)

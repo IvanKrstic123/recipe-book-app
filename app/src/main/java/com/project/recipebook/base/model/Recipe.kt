@@ -30,7 +30,11 @@ class Ingredient(
 )
 
 class RecipeDetails(
-    val extendedIngredients: List<Ingredient>
+    val extendedIngredients: List<Ingredient>,
+    val title: String,
+    val readyInMinutes: Int,
+    val servings: Int,
+    val image: String
 )
 
 

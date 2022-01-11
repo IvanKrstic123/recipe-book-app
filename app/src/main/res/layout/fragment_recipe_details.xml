@@ -44,12 +44,26 @@
             android:text="Dish Name"
             android:textAlignment="center"
             android:textColor="@color/yellow"
-            android:textSize="13sp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailsCardView" />
 
-        <!--Ingredients section-->
+        <TextView
+            android:id="@+id/detailsReadyInMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxEms="10"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="Dish Name"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsDishName" />
 
+        <!--Ingredients section-->
         <LinearLayout
             android:id="@+id/detailsIngredientsLayout"
             android:layout_width="match_parent"
@@ -80,8 +94,8 @@
         </LinearLayout>
 
         <!--Istructions section-->
-
         <LinearLayout
+            android:id="@+id/detailsInstructionsSection"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
